@@ -1,11 +1,13 @@
 package hellojavapkg;
 
-// Java Imports
+//Java Imports
 import java.util.Scanner;
+import java.util.Arrays;
 
-public class hellojavaclass {
-	
+public class Main {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
 		
 //		// ======================PRINTING======================
@@ -20,9 +22,9 @@ public class hellojavaclass {
 //		
 //		// To print int
 //		System.out.println(1);
-//		
-//		
-//		
+
+		
+		
 //		// ======================VARIABLES======================
 //		int asa; // Declaration
 //		asa = 42; // Assignment
@@ -49,19 +51,52 @@ public class hellojavaclass {
 //		System.out.println("It's " + x + " o'clock");
 		
 		
-		// This scanner is to get user input
-		Scanner scanner = new Scanner(System.in);
 		
-		// Input's question
-		System.out.println("What is your name? ");
+//		// This scanner is to get user input
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		// Input's question
+//		System.out.println("What is your name? ");
+//		
+//		// Initialized input into variable
+//		String name = scanner.nextLine();
+//		
+//		// Print the input with a statement
+//		System.out.println("Hello " + name + "!");
 		
-		// Initialized input into variable
-		String name = scanner.nextLine();
 		
-		// Print the input with a statement
-		System.out.println("Hello " + name + "!");
+		// ARRAYS
+		// Java Arrays are STATIC (meaning the size can't be change and is fixed)
+		
+		// IF array content is not known but slots are known
+//		int[] array1 = new int[3];
+//		array1[0] = 1;
+//		array1[1] = 2;
+//		array1[2] = 3;
+//		
+//		// IF array is known
+//		int[] array2 = {1, 2, 3, 4, 5};
+//		System.out.println(Arrays.toString(array2));
+//		
+//		// Print length of array
+//		System.out.println(array2.length);
 		
 		
 		
+		// Excercise for ARRAYS
+		Array x = new Array(10); // Should be Array x = new Array(3);
+		x.insert(1);
+		x.insert(2);
+		x.insert(3);
+		x.insert(4);
+		x.insert(5);
+		x.insert(6);
+		x.removeAt(2);
+		x.print();
+//		x.insert(items:1);
+//		x.insert(items:2);
+//		x.insert(items:3);
+//		System.out.println(x.indexOf(2));
 	}
 }
+
