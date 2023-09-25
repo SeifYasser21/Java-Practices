@@ -91,12 +91,17 @@ public class Main {
 		x.insert(4);
 		x.insert(5);
 		x.insert(6);
+		x.insert(7);
 		x.removeAt(2);
 		x.print();
 //		x.insert(items:1);
 //		x.insert(items:2);
 //		x.insert(items:3);
 //		System.out.println(x.indexOf(2));
+		
+		
+		
+//		Test commit via staging branch
 	}
 }
 
