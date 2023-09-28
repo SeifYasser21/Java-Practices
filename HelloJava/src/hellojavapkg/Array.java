@@ -21,6 +21,8 @@ public class Array {
 		items[count++] = item;
 		}
 	
+	
+	
 	public void removeAt(int index) {
 		// Validate the index (if index is in array)
 		if (index < 0 || index >= count)
