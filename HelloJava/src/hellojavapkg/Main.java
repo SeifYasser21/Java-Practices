@@ -1,40 +1,42 @@
 package hellojavapkg;
 
-//Java Imports
-
 public class Main {
 
-	public static void main(String[] args) {
-		
-		// BULLET POINT 1
-		// Initialize String[] arrayA with provided data
-        String[] arrayA = {"Honda", "Toyota", "Proton"};
+    public static void main(String[] args) {
+        // Task 1: Initialize arrayA with provided data
+        StringArray arrayA = new StringArray(new String[]{"Honda", "Toyota", "Proton"});
+        
+        // Task 2: Add "Nissan" to "arrayA"
+        arrayA.addItem("Nissan");
 
-        // Create a StringArray object with the initialized array
-        StringArray arrayA1 = new StringArray(arrayA);
-        
-        // BULLET POINT 2
-        // Insert 'Nissan' item into the string array using the insertByName method
-        arrayA1.insertByName("Nissan");
-        String Nissan = arrayA1.getByName("Nissan");
-        System.out.println("Newly Inserted Element: " + Nissan);
-        
-        
-        // BULLET POINT 3
-        // Insert item "Mazda" as first element
-        arrayA1.insertByIndex(0, "Mazda");
-        
-        // Initialize variable "Mazda" and retrieve the first element. Then print message with item
-        String Mazda = arrayA1.getByIndex(0);
-        System.out.println("New First Element: " + Mazda);
-        
-        
-        // BULLET POINT 4 ---------------------- START HERE !!!
+        // Print "arrayA" after adding "Nissan"
+        System.out.println("Task 2: Updated arrayA after adding Nissan:");
+        arrayA.getFormattedArray();
+        System.out.println("--------------------------------------------");
 
-        // Print the updated array
-//        System.out.println("Updated arrayA:");
-//        for (String item : newArrayA1.getArray()) {
-//            System.out.println(item);
-//        }
+        // Task 3: Add "Mazda" as the first element of "arrayA"
+        arrayA.addItemAtIndex("Mazda", 0);
+
+        // Print "arrayA" after adding "Mazda" at the beginning
+        System.out.println("Task 3: Updated arrayA after adding Mazda at the beginning:");
+        arrayA.getFormattedArray();
+        System.out.println("--------------------------------------------");
+
+        // Task 4: Create a new array "arrayB" with animal names
+        String[] arrayB = {"Monkey", "Dog", "Pheasant"};
+
+        // Combine "arrayA" and "arrayB" into a new array "combinedArray"
+        String[] combinedArray = StringArray.combineArrays(arrayA.getArray(), arrayB);
+
+        // Initialize arrayC with newly combined array
+        StringArray arrayC = new StringArray(combinedArray);
+        
+        // Print out arrayC
+        System.out.println("Task 4: Combined arrayA and arrayB:");
+        arrayC.getFormattedArray();
+        System.out.println("--------------------------------------------");
+      
     }
+    		
 }
+
