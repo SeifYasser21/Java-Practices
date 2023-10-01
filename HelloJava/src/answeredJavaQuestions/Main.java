@@ -1,4 +1,5 @@
-package hellojavapkg;
+package answeredJavaQuestions;
+
 
 public class Main {
 
@@ -180,4 +181,5 @@ public class Main {
 
     }
 }
+
 

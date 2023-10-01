@@ -1,4 +1,4 @@
-package hellojavapkg;
+package answeredJavaQuestions;
 
 import java.util.Arrays;
 
