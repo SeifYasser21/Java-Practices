@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
     	
     	// ================================ QUESTION 1 ================================
+    	System.out.println("====================================== QUESTION 1 ======================================");
     	
         // Task 1: Initialize arrayA with provided data
         StringArray arrayA = new StringArray(new String[]{"Honda", "Toyota", "Proton"});
@@ -14,7 +15,8 @@ public class Main {
         arrayA.addItem("Nissan");
 
         // Print "arrayA" after adding "Nissan"
-        System.out.println("Task 2: Updated arrayA after adding Nissan:");
+        System.out.println("Task 2:");
+        System.out.println("Updated arrayA after adding Nissan:");
         arrayA.getFormattedArray();
         System.out.println("----------------------------------------------------------------------------------------");
 
@@ -23,7 +25,8 @@ public class Main {
         arrayA.addItemAtIndex("Mazda", 0);
 
         // Print "arrayA" after adding "Mazda" at the beginning
-        System.out.println("Task 3: Updated arrayA after adding Mazda at the beginning:");
+        System.out.println("Task 3:");
+        System.out.println("Updated arrayA after adding Mazda at the beginning:");
         arrayA.getFormattedArray();
         System.out.println("----------------------------------------------------------------------------------------");
 
@@ -38,7 +41,8 @@ public class Main {
         StringArray arrayC = new StringArray(combinedArray);
         
         // Print out arrayC
-        System.out.println("Task 4: Combined arrayA and arrayB:");
+        System.out.println("Task 4:");
+        System.out.println("Combined arrayA and arrayB:");
         arrayC.getFormattedArray();
         System.out.println("----------------------------------------------------------------------------------------");
         
@@ -89,6 +93,27 @@ public class Main {
         mapC.removePairsByValueChar("o");
         System.out.println("MapC after removing entries with 'o' in the value:");
         mapC.printFormattedMap();
+        System.out.println("----------------------------------------------------------------------------------------");
+        
+        
+        // Task 10: Reverse a string
+        // Define str with provided string
+        String str = "111222888222555";
+        System.out.println("Task 10:");
+        System.out.println("Original str: " + str);
+        
+        // Use the StringBuilder class and initialize the reversed str
+        StringBuilder reverseStr = new StringBuilder();
+        
+        // Append str into StringBuilder reverseStr
+        reverseStr.append(str);
+        
+        // reverse StringBuilder input1
+        reverseStr.reverse();
+        
+        // Convert the reverseStr StringBuilder to a String and rename it to "str"
+        str = reverseStr.toString();
+        System.out.println("Reversed str: " + str);
         System.out.println("----------------------------------------------------------------------------------------");
     }
     		
