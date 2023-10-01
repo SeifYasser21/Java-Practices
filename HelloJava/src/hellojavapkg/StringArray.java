@@ -1,6 +1,5 @@
 package hellojavapkg;
 
-// Imports used
 import java.util.Arrays;
 
 public class StringArray {
@@ -25,13 +24,23 @@ public class StringArray {
     
     // Create static method that takes in an array and return it in a formatted way ["a","b","c"]
     public void getFormattedArray() {
+    	// Print the beginning of the formatted array "["
         System.out.print("[");
+        
+        // Loop through each array item
         for (int i = 0; i < array.length; i++) {
+        	
+        	// Print array item
             System.out.print(array[i]);
+            
+            // If the current item isn't the last item of the array
             if (i < array.length - 1) {
+            	
+            	// Add separation between items
                 System.out.print(", ");
             }
         }
+        // Print the end of the formatted array "]"
         System.out.println("]");
     }
 
