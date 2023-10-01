@@ -21,7 +21,7 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------------");
 
         
-        // Task 3: Add "Mazda" as the first element of "arrayA"
+        // Task 3: Add "Mazda" as the first item of "arrayA"
         arrayA.addItemAtIndex("Mazda", 0);
 
         // Print "arrayA" after adding "Mazda" at the beginning
@@ -99,22 +99,85 @@ public class Main {
         // Task 10: Reverse a string
         // Define str with provided string
         String str = "111222888222555";
+        
+        // Display the original string before reversal process
         System.out.println("Task 10:");
         System.out.println("Original str: " + str);
         
-        // Use the StringBuilder class and initialize the reversed str
-        StringBuilder reverseStr = new StringBuilder();
+        // Use the StringBuilder class and insert str string into the builder
+        StringBuilder stringBuilder = new StringBuilder(str);
         
-        // Append str into StringBuilder reverseStr
-        reverseStr.append(str);
-        
-        // reverse StringBuilder input1
-        reverseStr.reverse();
+        // reverse str via stringBuilder
+        stringBuilder.reverse();
         
         // Convert the reverseStr StringBuilder to a String and rename it to "str"
-        str = reverseStr.toString();
+        str = stringBuilder.toString();
         System.out.println("Reversed str: " + str);
         System.out.println("----------------------------------------------------------------------------------------");
+        
+        // Task 11: Replace parts of a string
+        // Initialize both the target string and replacement string
+        String targetStr = "222";
+        String replacementStr = "aaa";
+        
+        // Initialize the range of indexes needed to be replaced.
+        int startingIndex = stringBuilder.lastIndexOf(targetStr);
+        int endingIndex = startingIndex + targetStr.length();
+        
+        // Display the original string before reversal process
+        System.out.println("Task 11:");
+        System.out.println("Original str: " + str);
+        
+        // Use StringBuilder to undergo the replacement process for the specified range
+        stringBuilder.replace(startingIndex, endingIndex, replacementStr);
+        
+        // re-initialize 'str' variable
+        str = stringBuilder.toString();
+        
+        // Print the new 'str' string
+        System.out.println("Replaced str: " + str);
+        System.out.println("----------------------------------------------------------------------------------------");
+        
+        // ================================ QUESTION 2 ================================
+    	System.out.println("====================================== QUESTION 2 ======================================");
+    	
+    	// Thought process:
+    	// Considering that the two ints(1 & 2) produced the 3rd int.
+    	// I deduced that the 3rd int was a multiplication of the 1st and 2nd int.
+    	// However, the 4th was a bit misleading as is can be either multiplication or addition
+    	// But the more I went through the sequence of numbers, I came to the conclusion that:
+    	// The first 2 ints were multiplication, then 2nd int and 3rd int were addition, and the formula recycles from there.
+    	// To implement that into code however, I used odd/even index positioning to determine if the next sequence was addition or multiplication
+    	
+    	// Initialize an array to store the numbers from the sequence
+    	// I used 12 indexes for the array as it would give the next 5 sequences after the provided numbers.
+    	int[] sequence = new int[12];
+    	
+    	// Set the first 2 indexes as the first 2 numbers provided in the question as favoured
+        sequence[0] = 1;
+        sequence[1] = 2;
+
+        // Loop through the "sequence" array starting from index 2
+        for (int i = 2; i < sequence.length; i++) {
+        	// If the current index is an even number
+            if (i % 2 == 0) {
+                // Multiply the previous two items of the sequence
+                sequence[i] = sequence[i - 2] * sequence[i - 1];
+            } 
+            // If the current index is NOT an even number
+            else {
+                // Add the previous two items of the sequence
+                sequence[i] = sequence[i - 2] + sequence[i - 1];
+            }
+        }
+
+        // Print the last 5 indexes of the sequence to provide the next 5 numbers of the provided sequence
+        System.out.println("The next 5 numbers of the sequence:");
+        for (int j = sequence.length - 5; j < sequence.length; j++) {
+            System.out.println("Number " + (j + 1) + ": " + sequence[j]);
+        }
+        System.out.println("----------------------------------------------------------------------------------------");
+
     }
 }
 
