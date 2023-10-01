@@ -1,4 +1,4 @@
-package hellojavapkg;
+package answeredJavaQuestions;
 
 import java.util.HashMap;
 import java.util.Map;
